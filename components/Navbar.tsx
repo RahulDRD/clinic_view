@@ -1,19 +1,23 @@
 'use client';
 
 import Link from 'next/link';
-import { Activity } from 'lucide-react';
+import Image from 'next/image';
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+    <nav className="fixed top-0 w-full bg-transparent z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-500/20">
-              <Activity className="w-5 h-5 text-white" />
-            </div>
+            <Image 
+              src="/logo_transparent.png" 
+              alt="AuraClinic Logo" 
+              width={32} 
+              height={32}
+              className="group-hover:scale-110 transition-transform"
+            />
             <span className="text-xl font-bold text-gray-900 tracking-tight group-hover:text-emerald-600 transition-colors">AuraClinic</span>
           </Link>
 

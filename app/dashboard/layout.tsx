@@ -8,17 +8,17 @@ import { Toaster } from 'react-hot-toast';
 
 export default async function DashboardLayout({ children }: { children: ReactNode }) {
   const { isAuthenticated } = getKindeServerSession();
-  
+
   if (!(await isAuthenticated())) {
-      redirect("/api/auth/login");
+    redirect("/api/auth/login");
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-[#F4F7FE]"> {/* Soft pastel background */}
       <Toaster position="top-right" />
       <AuthSync />
       <Sidebar />
-      <main className="flex-1 ml-64 p-8">
+      <main className="flex-1 ml-[280px] p-8 overflow-y-auto">
         {children}
       </main>
     </div>

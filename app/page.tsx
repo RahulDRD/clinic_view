@@ -5,7 +5,7 @@ import { Activity, ShieldCheck, Users, TrendingUp } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 font-sans flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-100 via-teal-50 to-emerald-100 font-sans flex flex-col">
       <Navbar />
       
       <main className="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center justify-center flex-grow w-full">
